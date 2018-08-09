@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register page</title>
+</head>
+<body>
+<h3>Registration page</h3>
+<p>
+	<span>name</span>&nbsp;&nbsp;
+	<input type="text" onkeyup ="input_check()" >
+</p>
+<p>
+	<span>Email</span>&nbsp;&nbsp;
+	<input type="email" onkeyup ="input_check()">
+</p>
+<p>
+	<span>password</span>&nbsp;&nbsp;
+	<input type="password" onkeyup ="input_check()">
+</p>
+<p>
+	<button onClick = "l_storage()"  disabled="disabled">Register</button>
+</p>
+<span id="result"></span>
+<script type="text/javascript">
+	var input_one;
+	var input_two;
+	var input_three;
+	function input_check(){
+	 input_one = document.querySelector("p:nth-child(2) input").value;
+	 input_two = document.querySelector("p:nth-child(3) input").value;
+	 input_three = document.querySelector("p:nth-child(4) input").value;		
+     var btn = document.querySelector("p > button");
+     if(input_one!="" && input_two!="" &&input_three!=""){
+    	btn.removeAttribute("disabled");
+     }
+     else{
+     	btn.setAttribute("disabled","disabled");
+     }
+	}
+	function l_storage(){
+	 var users = [];
+	var obj={};
+    obj.inp_one=input_one;
+    obj.inp_two=input_two;
+    obj.inp_three=input_three;
+    document.getElementById("result").innerHTML = obj;
+    var res = localStorage.getItem('users');
+    if(res==null){
+    	users.push(obj);
+    }else{
+    	users = JSON.parse(res);
+    	users.push(obj);
+    }
+   }
+</script>
+</body>
+</html>
