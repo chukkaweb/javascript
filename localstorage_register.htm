@@ -44,7 +44,7 @@
     obj.uname=input_one;
     obj.email=input_two;
     obj.password=input_three;
-    document.getElementById("result").innerHTML = obj;
+    document.getElementById("result").innerHTML = JSON.stringify(obj);
     var res = localStorage.getItem('users');
     if(res==null){
     	users.push(obj);
