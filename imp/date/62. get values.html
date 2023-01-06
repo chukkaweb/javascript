@@ -1,0 +1,39 @@
+<html>
+
+	<body>
+
+		<div id="div1"></div>
+		<div id="div2"></div>
+		<div id="div3"></div>
+		<div id="div4"></div>
+		<div id="div5"></div>
+		<div id="div6"></div>
+		<div id="div7"></div>
+		
+		<script type="text/javascript">
+
+			var d;
+			d = new Date();
+
+			var n1, n2, n3, n4, n5, n6, n7;
+			n1 = d.getDate();
+			n2 = d.getMonth(); //0 to 11
+			n3 = d.getFullYear();
+			n4 = d.getHours();
+			n5 = d.getMinutes();
+			n6 = d.getSeconds();
+			n7 = d.getMilliseconds();
+
+			document.getElementById("div1").innerHTML = n1; //2
+			document.getElementById("div2").innerHTML = n2; //3
+			document.getElementById("div3").innerHTML = n3; //2015
+			document.getElementById("div4").innerHTML = n4; //8
+			document.getElementById("div5").innerHTML = n5; //50
+			document.getElementById("div6").innerHTML = n6; //10
+			document.getElementById("div7").innerHTML = n7; //441
+
+		</script>
+
+	</body>
+	
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+      <script>
+       function printObj(){
+           var uid=document.querySelector("p:first-child input").value;
+           var pwd=document.querySelector("p:nth-child(2) input").value;
+           var res=document.querySelector("p:last-of-type span");
+
+           var obj={}
+           obj.userName=uid;
+           obj.password=pwd;
+
+           res.innerHTML=JSON.stringify(obj);
+       }
+      </script>
+    </head>
+    <body>
+        <p>
+            <span>Uid</span>
+            <input type="text">
+        </p>
+        <p>
+            <span>Password</span>
+            <input type="password">
+        </p>
+        <p>
+            <input type="button" value="Login" onclick="printObj()">
+        </p>
+        <p>
+        <span></span>
+        </p>
+    </body>
+</html>

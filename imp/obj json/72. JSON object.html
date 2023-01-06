@@ -1,0 +1,56 @@
+<html>
+
+	<head>
+		<title>JSON - Object Example</title>
+
+		<style type="text/css">
+
+			body
+			{
+				font-family: 'Segoe UI';
+				font-size: 20px;
+			}
+			
+			span
+			{
+				font-weight: bold;
+				color: green;
+			}
+
+		</style>
+
+	</head>
+	
+	<body>
+
+		<p>
+			Car Model: <span id="span1"></span><br>
+			Car Color: <span id="span2"></span><br>
+			Car Year: <span id="span3"></span><br>
+		</p>
+		
+		<input type="button" value="Show Data" id="button1">
+
+        <script type="text/javascript">
+
+			document.getElementById("button1") .addEventListener("click", fun1);
+
+			function fun1()
+			{
+                    var mycar =
+					{
+						"CarModel": "Honda City",
+						"CarColor": "Red",
+						"CarYear": 2015
+					};
+
+                    document.getElementById("span1").innerHTML = mycar.CarModel;
+                    document.getElementById("span2").innerHTML = mycar.CarColor;
+                    document.getElementById("span3").innerHTML = mycar.CarYear;
+             }
+
+        </script>
+
+	</body>
+
+</html>

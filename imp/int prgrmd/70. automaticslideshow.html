@@ -1,0 +1,38 @@
+<html>
+
+	<head>
+		<title>Automatic Photo Slide Show</title>
+	</head>
+
+	<body>
+
+		<h1>Automatic Photo Slide Show - using JS</h1>
+		
+		<img src="img1.jpg" width="120px" id="myimage">
+
+		<script type="text/javascript">
+
+			var allimages = [ "img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg", "img6.jpg", "img7.jpg", "img8.jpg", "img9.jpg" ];
+
+			var c = 0;
+
+			var x = setInterval(fun1, 4000); //1000 milli sec = 1 sec
+		
+			function fun1()
+			{
+				c++;
+				var i = document.getElementById("myimage");
+				i.src = allimages[c];
+
+				if (c == allimages.length - 1)
+				{
+					clearInterval(x);
+					alert("Done");
+				}
+			}
+
+		</script>
+
+	</body>
+
+</html>

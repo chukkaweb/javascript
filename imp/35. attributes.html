@@ -1,0 +1,32 @@
+<html>
+
+	<head>
+		<title>JavaScript: Changing Attributes</title>
+	</head>
+
+	<body>
+		<h1>JavaScript: Changing Attributes</h1>
+
+		<img src="img1.jpg" id="myImage" width="150px" height="100px">
+		<br>
+
+		<input type="button" id="button1" value="Click me">
+
+		<script type="text/javascript">
+			
+			var btn = document.getElementById("button1");
+			btn.addEventListener("click", fun1);
+
+			function fun1()
+			{
+				var temp = document.getElementById("myImage");
+				temp.setAttribute("src", "img2.jpg");
+				temp.setAttribute("title", "this is tooltip");
+				temp.setAttribute("alt", "this is alternate text");
+			}
+
+		</script>
+
+	</body>
+
+</html>

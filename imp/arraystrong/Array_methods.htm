@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Javascript Array Methods</title>
+    </head>
+    <body>
+        <h3>Welcome to Javascript Array Methods</h3>
+        <script>
+            //convert  given array to string
+            var A = ["html","css","javascript"];
+            var B = [10,20,30];
+            document.write(A.toString()+"<br>");
+            document.write(B.toString()+"<br>");
+
+            // join()
+            var C = ["html","css","javascript"];
+            document.write(C.join("_")+"<br>");
+
+        //delete()
+        document.write(delete C[0] + "<br>");
+
+        //Merging (Concatenating) Arrays
+        var D = ["html","css","javascript"];
+        var E = ["angular","Nodejs","Mogodb"];
+        var F = ["Jquery","Boostarp"];
+        var merge = D.concat(E);
+        var merge_three=D.concat(E,F);
+        console.log(D.slice(1));//o/p 
+        document.write(merge +"<br>");
+        document.write(merge_three +"<br>");
+        console.log(merge_three);
+        
+        //fileter
+        var words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+        const res =  words.filter(word =>word.length<6);
+        document.write(res);
+
+        //every  // return the boolean value
+        var arr = [10,1,30,22,33,25]
+        function res_one (v) {
+            return v < 40
+        }
+    console.log(arr.every(res_one));
+    
+    //indexof 
+    var wordss = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+    console.log(wordss.indexOf('elite'));
+
+//map() the map() method creates a new array with the results of calling a provided function on every element in the calling array.
+var array1 = [1, 4, 9, 16];
+const map1 = array1.map(y => y * 2);// y indecate int initial value of an array
+console.log(map1);
+
+//lastIndexOf() method returns the last index at which a given element can be found in the array, or -1 if it is not present. The array is searched backwards, starting at fromIndex.
+var fruits =["appple","mango","banana","papaya"];
+console.log(fruits.lastIndexOf("banana"));
+
+ //some() used to at least one element in the array passes  
+//find even number
+var array2 = [1, 2, 3, 4, 5];
+var even = function(element) {
+  // checks whether an element is even
+  return element % 2 === 0;
+};
+console.log(array2.some(even));
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+
+	<head>
+		<title>JSON - Array Example</title>
+
+		<style type="text/css">
+			body
+			{
+				font-family: 'Segoe UI';
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	
+	<body>
+
+		<ul id="list1">
+		</ul>
+		
+		<input type="button" value="Show Data" id="button1">
+
+        <script type="text/javascript">
+			
+			document.getElementById("button1") .addEventListener("click", fun1);
+
+			function fun1()
+			{
+                    var cars = 
+					[
+						{ "CarModel": "Honda City", "CarColor": "Red" },
+						{ "CarModel": "Hyundai Santa", "CarColor": "Gray" },
+						{ "CarModel": "Benz B Class", "CarColor": "Black" },
+						{ "CarModel": "Skoda Rapid", "CarColor": "White" }
+                    ];
+
+                    for(i=0; i<cars.length; i++)
+					{
+						var temp = "<li>" + cars[i].CarModel + ", " + cars[i].CarColor+ "</li>";
+						document.getElementById("list1").innerHTML += temp;
+					}
+
+            }
+
+        </script>
+
+	</body>
+
+</html>

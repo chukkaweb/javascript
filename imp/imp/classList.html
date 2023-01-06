@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>ClassList</title>
+        <style>
+         .red-color{
+             color: red;
+         }
+        </style>
+        <script>
+        function fnClick(e){
+             var clickEleRef=document.querySelector('.red-color');
+             if(clickEleRef!=null){
+                  clickEleRef.classList.remove('red-color');
+             } 
+             var selEleRef=e.target;
+             selEleRef.classList.add('red-color');
+         }
+        </script>
+    </head>
+    <body>
+        <li>
+            <a href="#" onclick="fnClick(event)">Home</a>
+            <a href="#" onclick="fnClick(event)">About</a>
+            <a href="#" onclick="fnClick(event)">Contact</a>
+        </li>
+    </body>
+</html>

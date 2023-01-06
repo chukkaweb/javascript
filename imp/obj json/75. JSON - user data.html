@@ -1,0 +1,66 @@
+<html>
+
+	<head>
+		<title>JSON User Data Example</title>
+
+		<style type="text/css">
+			body, input
+			{
+				font-family: 'Segoe UI';
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	
+	<body>
+
+		<h3>Type Person Details</h3>
+
+		<div id="div1">
+			
+			First Name:<br>
+			<input type="text" id="TextBox1"><br>
+			
+			Last Name:<br>
+			<input type="text" id="TextBox2"><br>
+			
+			Age:<br>
+			<input type="text" id="TextBox3"><br>
+			
+		</div>
+		
+		<input type="button" id="button1" value="Add">
+		
+
+        <script type="text/javascript">
+
+			document.getElementById("button1").addEventListener("click", fun1);
+
+            //global variable
+            var Persons = [ ];
+           
+
+			function fun1()
+			{
+				var p =
+					{
+						"FirstName": document.getElementById("TextBox1").value,
+						"LastName": document.getElementById("TextBox2").value,
+						"Age": document.getElementById("TextBox3").value
+					};
+
+				Persons.push(p);
+
+				alert(JSON.stringify(Persons));
+
+				document.getElementById("TextBox1").value = "";
+				document.getElementById("TextBox2").value = "";
+				document.getElementById("TextBox3").value = "";
+				document.getElementById("TextBox1").focus();
+			};
+
+        </script>
+
+	</body>
+	
+</html>

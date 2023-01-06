@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Js Int </title>
+</head>
+<body>
+	<!-- <button type="submit" onclick="outer()">click me</button> -->
+	<p id="clsr"></p>
+	<div id=”js”>Javascript</div>   
+<script>
+// document.getElementById("js").style.color = "blue";
+	//closure 
+function outer(){
+var name ="ganesh chukka";
+function inner(){
+	document.getElementById('clsr').innerHTML = name;
+}
+return inner();
+}
+outer();
+// var clsure = outer();
+// clsure();
+
+//===============object creation=============== 
+// Using `new` keyword: This is the most common way to create an object in Java. ...
+// By Using Factory Method: ClassName ObgRef=ClassName. ...
+// By Using Cloning Concept: ...
+// Using `Class.forName()`: ...
+// Using object deserialization:
+
+var obj = { //Using the bracket's
+name:"ganesh",
+deg:"ui developer"
+}
+document.write(obj.name + " "+ obj.deg);
+
+//Using the Object() constructor
+var person = new Object(); 
+person.firstName = "naresh";
+person.lastName = "ch";
+person.age = 50;
+person.eyeColor = "blue";
+document.write("<br>"+ person.firstName +"<br>");
+
+//==============array concepts==========
+var ar = [9, 5, 3, 4, 15, 26, 18, 12, 95, 68, 55, 24, 66, 35, 77, 63, 96, 10, 6];
+document.write(ar + "<br>");
+document.write(ar.push(1) + "<br>");
+document.write(ar.sort() + "<br>");
+
+
+//even numbrs
+function even(a) {
+  var arr = [];
+  for (var i=0; i < a.length; i++){
+    if (a[i] % 2 === 0)
+    {
+      arr.push(a[i]);
+    }
+    else{
+    	// odd.push(a[i]);
+    }
+  }
+return arr;
+}
+document.write(even(ar));
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+
+	<head>
+		<title>JavaScript OOPS - Example 3</title>
+	</head>
+
+	<body>
+
+		<h1>JavaScript OOPS - Example 3</h1>
+		<span id="span1"></span><br>
+		<span id="span2"></span><br>
+		<span id="span3"></span><br><br>
+
+		<span id="span4"></span><br>
+		<span id="span5"></span><br>
+		<span id="span6"></span><br>
+
+		<script type="text/javascript">
+
+			//creating class
+			function Car(a, b, c)
+			{
+				this.CarModel = a;
+				this.CarColor = b;
+				this.CarYear = c;
+			}
+
+			//creating objects
+			var car1 = new Car("Honda City", "Red", 2015);
+			var car2 = new Car("Benz", "Black", 2014);
+
+			document.getElementById("span1").innerHTML = car1.CarModel;
+			document.getElementById("span2").innerHTML = car1.CarColor;
+			document.getElementById("span3").innerHTML = car1.CarYear;
+
+			document.getElementById("span4").innerHTML = car2.CarModel;
+			document.getElementById("span5").innerHTML = car2.CarColor;
+			document.getElementById("span6").innerHTML = car2.CarYear;
+
+		</script>
+
+	</body>
+
+</html>

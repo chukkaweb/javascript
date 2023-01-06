@@ -1,0 +1,136 @@
+<html>
+
+	<head>
+
+		<title>EMI Calculator - using JS</title>
+
+		<style type="text/css">
+			body, input, textarea, select
+			{
+				font-family: corbel;
+				font-size: 18px;
+			}
+
+			.class1
+			{
+				color: green;
+				font-weight: bold;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<h1>EMI Calculator - using JS</h1>
+
+		<h2>BAJAJ Electronics, Panjagutta</h2>
+
+		<form>
+			<table>
+				<tr>
+					<td>
+						<label for="txtPrice">
+							Price
+						</label>
+					</td>
+					<td>
+						<input type="text" id="txtPrice">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="drpProductType">
+							Choose Poduct Type:
+						</label>
+					</td>
+					<td>
+						<select id="drpProductType">
+							<option value="tv">
+								LED TV
+							</option>
+							<option value="ac">
+								Split AC
+							</option>
+						</select>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+					</td>
+					<td>
+						<input type="button" value="OK" id="btnOK">
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						No. of EMIs:
+					</td>
+					<td>
+						<span id="SpanNoOfEMIs" class="class1"></span>
+					</td>
+				</tr>
+
+				<tr>
+					<td>EMI Amount:</td>
+					<td><span id="SpanEMIAmount" class="class1"></span></td>
+				</tr>
+
+				<tr>
+					<td>Down Payment:</td>
+					<td><span id="SpanDownPayment" class="class1"></span></td>
+				</tr>
+
+			</table>
+		</form>
+
+		<!--
+			1) No. of EMI's for all products: 10
+			2) Down payment is:
+					For LED TV = 10%
+					For AC = 15%
+			-->
+
+		<script type="text/javascript">
+			
+			function fun1()
+			{
+					var Price, ProductType, DownPayment, RemainingAmount, EMIAmount;
+
+					Price = parseInt(document.getElementById("txtPrice").value);
+
+					ProductType = document.getElementById("drpProductType").value;
+
+					if (ProductType == "tv")
+					{
+						DownPayment = Price * 10 / 100;
+					}
+					else if (ProductType == "ac")
+					{
+						DownPayment = Price * 15 / 100;
+					}
+					else
+					{
+						DownPayment = 0;
+					}
+
+					RemainingAmount = Price - DownPayment;
+					EMIAmount = RemainingAmount / 10;
+
+					document.getElementById("SpanNoOfEMIs").innerHTML = "10";
+
+					document.getElementById("SpanEMIAmount").innerHTML = EMIAmount;
+
+					document.getElementById("SpanDownPayment").innerHTML = DownPayment;
+			}
+
+			document.getElementById("btnOK") .addEventListener("click", fun1);
+			
+		</script>
+
+	</body>
+
+</html>

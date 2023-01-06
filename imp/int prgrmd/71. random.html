@@ -1,0 +1,37 @@
+<html>
+
+	<head>
+		<title>random</title>
+	</head>
+
+	<body>
+
+		<h1>random</h1>
+
+		<script type="text/javascript">
+			var n = Math.random(); //random number between 0 to 1
+			document.write(n);
+			document.write("<br>");
+
+			var n2 = n*9; //random number between 0 to 9
+			document.write(n2);
+			document.write("<br>");
+
+			var n3 = Math.round(n2);
+			document.write(n3);
+			document.write("<br>");
+
+			var MyImages = [ "img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg", "img6.jpg", "img7.jpg", "img8.jpg", "img9.jpg" ];
+
+			var temp = MyImages[n3];
+			document.write(temp);
+			document.write("<br>");
+
+			var s = "<img src=' " + temp + " ' width='140px'>";
+			document.write(s);
+
+		</script>
+
+	</body>
+
+</html>

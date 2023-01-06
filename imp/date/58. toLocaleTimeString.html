@@ -1,0 +1,24 @@
+<html>
+
+	<body>
+
+		<div id="div1"></div>
+		<div id="div2"></div>
+		
+		<script type="text/javascript">
+
+			var d;
+			d = new Date();
+
+			var s1, s2;
+			s1 = d.toLocaleTimeString();
+			s2 = d.toTimeString();
+
+			document.getElementById("div1").innerHTML = s1; //8:25:31 AM
+			document.getElementById("div2").innerHTML = s2; //08:25:31 GMT+0530 (India Standard Time)
+
+		</script>
+
+	</body>
+	
+</html>

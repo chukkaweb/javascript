@@ -1,0 +1,37 @@
+<html>
+<script language="javascript">
+function check()
+{
+if(document.frm.loc1.value=" ")
+window.alert("please enter a value")
+}
+
+function add()
+{
+document.frm.loc3.value=parseInt(document.frm.loc1.value)+
+parseInt(document.frm.loc2.value)
+}
+</script>
+
+<body onload="check()" >
+<CENTER><form name="frm">
+<CAPTION><FONT SIZE="" COLOR="RED">ADDITION OF TWO NUMBERS</FONT></CAPTION>
+<TABLE border="1">
+<TR>
+	<TD>ENTER FIRST VALUE:</TD>
+	<TD><input type="text" name="loc1"></TD>
+</TR>
+<TR>
+	<TD>ENTER SECOND VALUE:</TD>
+	<TD><input type="text" name="loc2"></TD>
+</TR>
+<TR>
+	<TD>THE RESULT IS:</TD>
+	<TD><input type="text" name="loc3"></br></TD>
+</TR>
+</TABLE>
+<input type="button" value="add"   onclick="add()">
+</CENTER>
+
+</body>
+</html>

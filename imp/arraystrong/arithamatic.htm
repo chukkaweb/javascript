@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arithmatic opetations with javascript</title>
+</head>
+<body>
+<span>Number_one</span>&nbsp;&nbsp;<input type="number"><br><br>
+<span>Number_two</span>&nbsp;&nbsp;<input type="number" id="num2"><br><br>
+<input type="submit" name="sub" value="Arithamatic" click="arithamatic()">&nbsp;&nbsp;
+<input type="reset" name="canl" value="cancel">
+<p>Result is <span id="reslt"></span></p>
+<script>
+	function arithamatic() {
+		var n1 = document.querySelector("body>input").value;
+		var n2 = document.getElementById("num2").value;
+		var res = document.getElementsById("reslt");
+		var sum = Number(n1)+Number(n2);
+		var sub = Number(n1)-Number(n2);
+		var mul = Number(n1)*Number(n2);
+		var divi = Number(n1)/Number(n2);
+		var mod = Number(n1)%Number(n2);
+		var obj ={};
+		obj.sum = sum;
+		obj.sub = sub;
+		obj.mul = mul;
+		obj.divi = divi;
+		obj.mod = mod;
+		res.innerHtml=JSON.stringify(obj);
+	}
+</script>
+</body>
+</html>
