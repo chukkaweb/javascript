@@ -1,0 +1,42 @@
+<html>
+
+	<head>
+		<title>JavaScript OOPS - Example 4</title>
+	</head>
+
+	<body>
+
+		<h1>JavaScript OOPS - Example 4</h1>
+		<span id="span1"></span><br>
+		<span id="span2"></span><br>
+		<span id="span3"></span>
+
+		<script type="text/javascript">
+
+			//creating class
+			function Person(a, b)
+			{
+				this.FirstName = a;
+				this.LastName = b;
+				this.GenerateFullName = function()
+					{
+						this.FullName = this.FirstName + " " + this.LastName;
+					}
+			}
+
+			//creating object
+			var person1 = new Person("Harry", "Potter");
+
+			document.getElementById("span1").innerHTML = person1.FirstName;
+
+			document.getElementById("span2").innerHTML = person1.LastName;
+
+			person1.GenerateFullName();
+
+			document.getElementById("span3").innerHTML = person1.FullName;
+
+		</script>
+
+	</body>
+
+</html>

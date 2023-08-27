@@ -1,0 +1,32 @@
+<html>
+    <head>
+       <title>StopPropagation</title> 
+       <style>
+        div{
+            border:2px solid red;
+            padding: 30px;
+        }
+       </style>
+       <script>
+           function f3(m,e){
+               alert(m)
+           }
+           function f2(m,e){
+               e.stopPropagation();
+               alert(m)
+           }
+           function f1(m,e){
+               alert(m)
+           }
+       </script>
+    </head>
+    <body>
+        <div onclick="f3('div3',event)">
+            <div onclick="f2('div2',event)">
+                <div onclick="f1('div1',event)">
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

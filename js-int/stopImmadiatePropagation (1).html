@@ -1,0 +1,13 @@
+<h1><a href="#" id="id1" class="c1">Click</a></h1>
+<script>
+    var ref1=document.querySelector("#id1");
+    var ref2=document.querySelector(".c1");
+    ref1.addEventListener('click',(event)=>{
+            // event.stopImmediatePropagation();
+                alert("id");
+    });
+
+    ref2.addEventListener('click',(event)=>{
+          alert("c1");
+    })
+</script>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript oops </title>
+</head>
+<body>
+<script>
+	//class  collection of variables and methods. 
+	  function arth(){ 
+	  //variables
+	  this.a=10; 
+	  this.b=20; 
+	  //methods 
+	  this.add = function() {
+	   return this.a+this.b
+	    } 
+	  this.sub = function(){ 
+	  	return this.a - this.b 
+	  }
+	   } 
+	 //object:- Object is a blue print of class.At the time of object creation, it  perform initialization by executing the constructor, by allocating the memory for variables and methods
+	 var obj = new arth();
+	 console.log(obj.add());
+	 console.log(obj.sub());
+
+	 // Constructor: The method name, whose name is class name, that method behaves like a constructor. We have two types of constructors, default, and parametrized constructor.
+
+	 //Inheritance:  What ever the parent has, by default available to child.
+	 function Arth(){ 
+	 	     this.b=20;   
+	        this.ad=function(){
+	        return this.a+this.b;  
+	          } 
+         }
+                       Arth.prototype.a=10; //prototype is the keyword.
+	                   var obj=new Arth(); 
+	                   console.log(obj.ad()); //30 
+
+	 //Overloading: Method name is same, but signature is different. Signature is nothing but , type of arguments, no of arguments, order of arguments.
+	 function sum(){
+	 this.add=function(a,b,c){
+	  return a+b+c;  
+	  }  
+	  this.add=function(a,b){
+	   return a+b 
+	   }
+	  }    
+	var obj = new sum();
+	console.log(obj.add(2,3,5));  // 5
+	  console.log(obj.add(2,3));  // 5 
+
+  // Overriding :  Method heading is same, but deﬁnition is different. Overriding is possible , only at the time of inheritance only.
+// window.alrt=function(msg){  // for alert message functionality by default 
+ // } 
+ // alert(‘naresh’)  //open popup with naresh 
+ // window.alrt=function(msg){ 
+ 	// console.log(msg);
+ 	 // } 
+// alert(‘naresh’);
+
+//Polymorphism:  It is the combination of both overloading and overriding. 
+
+//Abstraction : Hides the implementation , but providing services. Ex: ATM GUI  , possible by using methods.
+
+// Encapsulation : Binding  variables and methods in a single component is called as encapsulation. Ex : class 
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html>
+
+	<body>
+
+		<div id="div1"></div>
+		<div id="div2"></div>
+		
+		<script type="text/javascript">
+
+			var d;
+			d = new Date();
+
+			var s1, s2;
+			s1 = d.toLocaleDateString();
+			s2 = d.toDateString();
+
+			document.getElementById("div1").innerHTML = s1; //4/2/2015
+			document.getElementById("div2").innerHTML = s2; //Thu Apr 02 2015
+
+		</script>
+
+	</body>
+	
+</html>

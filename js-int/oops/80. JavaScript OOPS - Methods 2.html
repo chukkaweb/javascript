@@ -1,0 +1,71 @@
+<html>
+
+	<head>
+		<title>JavaScript OOPS - Example 5</title>
+	</head>
+
+	<body>
+
+		<h1>JavaScript OOPS - Example 5</h1>
+		<span id="span1"></span><br>
+		<span id="span2"></span><br>
+		<span id="span3"></span>
+
+		<script type="text/javascript">
+
+			//creating class
+			function Marks(a, b, c)
+			{
+				this.Maths = a;
+				this.Physics = b;
+				this.Chemistry = c;
+
+				this.CalculateTotalMarks = function()
+					{
+						this.TotalMarks = this.Maths + this.Physics + this.Chemistry;
+					};
+
+				this.CalculateAverageMarks = function()
+					{
+						this.AverageMarks = this.TotalMarks / 3;
+					};
+
+				this.CalculateGrade = function()
+					{
+						if (this.AverageMarks >=75)
+						{
+							this.Grade = "A";
+						}
+						else if (this.AverageMarks >=60 && this.AverageMarks < 75)
+						{
+							this.Grade = "B";
+						}
+						else if (this.AverageMarks >=50 && this.AverageMarks < 60)
+						{
+							this.Grade = "C";
+						}
+						else if (this.AverageMarks >=35 && this.AverageMarks < 50)
+						{
+							this.Grade = "D";
+						}
+						else
+						{
+							this.Grade = "Fail";
+						}
+					}
+			}
+
+			var m = new Marks(80, 56, 62);
+			m.CalculateTotalMarks();
+			m.CalculateAverageMarks();
+			m.CalculateGrade();
+
+			document.getElementById("span1").innerHTML = m.TotalMarks;
+			document.getElementById("span2").innerHTML = m.AverageMarks;
+			document.getElementById("span3").innerHTML = m.Grade;
+
+		</script>
+
+	</body>
+
+</html>
